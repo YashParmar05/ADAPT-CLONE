@@ -17,57 +17,6 @@ This repository contains the full pipeline: feature extraction, similarity compu
 - **End-to-end runner**: Single entry point (`runner.py`) to orchestrate the full pipeline.
 - **Reproducible results**: Serialized models, scalers, and metadata for exact re-runs.
 
-## 📁 Repository Structure
-
-ADAPT-CLONE/
-├── Approachs/
-│ ├── AST_based/
-│ │ ├── AST_similarity.csv # AST similarity results
-│ │ ├── Ast_similarity.py # AST similarity computation
-│ │ ├── ast_features.pkl # Serialized AST features
-│ │ └── build/ # Compiled language parser binaries
-│ ├── PDG_based/
-│ │ ├── pdg_features.pkl # Serialized PDG features
-│ │ ├── pdg_similarity.csv # PDG similarity results
-│ │ ├── pdg_similarity.py # PDG similarity computation
-│ │ └── run_pdg_pipeline.sh # Shell script to run PDG pipeline
-│ ├── Semantic_based/
-│ │ ├── embeddings_unixcoder.pkl # Precomputed semantic embeddings
-│ │ ├── semantic_similarity.py # Semantic similarity computation
-│ │ └── semantic_unixcoder_results.csv
-│ ├── Structure_based/
-│ │ ├── structure_similarity.py # Structural feature extraction
-│ │ └── structure_similarity.csv # Structural similarity results
-│ ├── Token_based/
-│ │ ├── token_similarity.py # Token-based similarity
-│ │ └── token_similarity.csv # Token similarity results
-│ ├── Hybrid_based/
-│ │ ├── hybrid_similarity.py # Hybrid similarity aggregation
-│ │ ├── combined.csv # Combined feature matrix
-│ │ ├── combined_labeled_10.csv # Labeled subset for training
-│ │ ├── clone_classification.csv # Final clone classification results
-│ │ └── Check_Results.py # Result validation/inspection
-│ ├── Adapt_model/
-│ │ ├── final_mlp_mixed_8feat.pt # Trained MLP model (PyTorch)
-│ │ ├── final_mlp_mixed_8feat_meta.json # Model metadata
-│ │ ├── final_mlp_mixed_8feat_scaler.joblib # Feature scaler
-│ │ ├── type_classifier_ensemble_best.joblib # Best ensemble classifier
-│ │ ├── type_classifier_ensemble_best.json # Ensemble config
-│ │ └── type_classifier_ensemble_scaler.joblib
-│ ├── Train_Model/
-│ │ ├── final_mlp_mixed_8feat.* # Training artifacts (model, scaler, logs)
-│ │ ├── type_classifier_ensemble_* # Ensemble training outputs
-│ │ ├── final_mlp_external_test_predictions.csv
-│ │ └── type_classifier_ensemble_metrics.txt
-│ ├── Results/
-│ │ └── ADAPT-CLONE <timestamp>/ # Per-run result folders
-│ │ ├── cluster_report.csv
-│ │ ├── evaluation_metrics.txt
-│ │ ├── pair_predictions.csv
-│ │ └── run_summary.json
-│ └── runner.py # Main entry point for full pipeline
-
-
 ## ▶️ How to Run
 
 ### Full pipeline (recommended)
@@ -96,7 +45,7 @@ Check the generated folder for:
 
 ### Individual components
 
-You can run parts of the pipeline independently:
+You can run parts of the pipeline independently but need to fix path accordingly:
 
 ```bash
 # Token-based similarity
