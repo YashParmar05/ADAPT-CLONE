@@ -1,0 +1,93 @@
+{
+  "timestamp": "2026-05-20T23:12:39.209139",
+  "device": "cuda",
+  "feature_cols": [
+    "S_token",
+    "S_AST",
+    "S_structure",
+    "unixcoder_cosine",
+    "unixcoder_l2",
+    "unixcoder_manhattan",
+    "S_PDG",
+    "pdg_valid"
+  ],
+  "distance_normalization": "1/(1+d)",
+  "final_feature_normalization": "MinMaxScaler(train_only)->[0,1]",
+  "final_probability_normalization": "sigmoid->[0,1]",
+  "hyperparameters": {
+    "hidden_dims": [
+      64,
+      32,
+      16,
+      8
+    ],
+    "dropout": 0.4,
+    "lr": 0.001,
+    "epochs": 400,
+    "batch_size": 4096,
+    "patience": 30,
+    "loss_type": "focal",
+    "pos_weight": 200.0,
+    "gamma": 2.0,
+    "alpha": 0.25,
+    "use_sampler": false
+  },
+  "best_epoch": 3,
+  "best_valid_f1": 0.9107692307692308,
+  "best_threshold": 0.87,
+  "codenet_info": {
+    "raw_rows": 120117250,
+    "raw_pos": 3867250,
+    "raw_neg": 116250000,
+    "sampled_rows": 3000000,
+    "sampled_pos": 500000,
+    "sampled_neg": 2500000,
+    "neg_pos_ratio": 5
+  },
+  "external_info": {
+    "ext_total_rows": 13366,
+    "ext_total_pos": 3280,
+    "ext_total_neg": 10086,
+    "ext_train_rows": 8553,
+    "ext_train_pos": 2099,
+    "ext_train_neg": 6454,
+    "ext_valid_rows": 2139,
+    "ext_valid_pos": 525,
+    "ext_valid_neg": 1614,
+    "ext_test_rows": 2674,
+    "ext_test_pos": 656,
+    "ext_test_neg": 2018
+  },
+  "soco_info": {
+    "soco_rows": 41263489,
+    "soco_pos": 278,
+    "soco_neg": 41263211
+  },
+  "validation_metrics": {
+    "f1": 0.9107692307692308,
+    "precision": 0.9866666666666667,
+    "recall": 0.8457142857142858,
+    "tp": 444,
+    "fp": 6,
+    "fn": 81,
+    "tn": 1608
+  },
+  "external_test_metrics": {
+    "f1": 0.9265905383360522,
+    "precision": 0.9964912280701754,
+    "recall": 0.8658536585365854,
+    "tp": 568,
+    "fp": 2,
+    "fn": 88,
+    "tn": 2016
+  },
+  "soco_metrics": {
+    "f1": 0.00012234112964416103,
+    "precision": 6.117472602898949e-05,
+    "recall": 0.8992805755395683,
+    "tp": 250,
+    "fp": 4086405,
+    "fn": 28,
+    "tn": 37176806
+  }
+}

@@ -1,0 +1,37 @@
+{
+  "timestamp": "2026-05-21_20-29-27",
+  "type": "clone_type_classifier_ensemble_comparison",
+  "cv_f1_macro_mean": 0.8604,
+  "cv_f1_macro_std": 0.0394,
+  "train_metrics": {
+    "accuracy": 0.9944,
+    "f1_macro": 0.9945,
+    "precision_macro": 0.9946,
+    "recall_macro": 0.9944
+  },
+  "best_model": "ExtraTrees",
+  "best_params": {
+    "n_estimators": 100,
+    "max_depth": null,
+    "min_samples_leaf": 1,
+    "criterion": "gini",
+    "class_weight": null,
+    "random_state": 42
+  },
+  "type_distribution": {
+    "Type-1": 90,
+    "Type-2": 90,
+    "Type-3": 90,
+    "Type-4": 90
+  },
+  "features": [
+    "S_token",
+    "S_AST",
+    "S_structure",
+    "unixcoder_cosine",
+    "unixcoder_l2",
+    "unixcoder_manhattan",
+    "S_PDG",
+    "pdg_valid"
+  ]
+}

@@ -1,0 +1,36 @@
+Clone Type Classifier — Ensemble Comparison
+Timestamp : 2026-05-21_20-29-27
+==================================================
+
+Best Model         : ExtraTrees
+Best CV F1 (macro) : 0.8604 ± 0.0394
+
+Accuracy   : 0.9944
+F1 (macro) : 0.9945
+Precision  : 0.9946
+Recall     : 0.9944
+
+Best Params : {"n_estimators": 100, "max_depth": null, "min_samples_leaf": 1, "criterion": "gini", "class_weight": null, "random_state": 42}
+
+Confusion Matrix:
+    T1  T2  T3  T4
+T1  90   0   0   0
+T2   0  90   0   0
+T3   0   1  89   0
+T4   0   1   0  89
+
+Classification Report:
+              precision    recall  f1-score   support
+
+      Type-1       1.00      1.00      1.00        90
+      Type-2       0.98      1.00      0.99        90
+      Type-3       1.00      0.99      0.99        90
+      Type-4       1.00      0.99      0.99        90
+
+    accuracy                           0.99       360
+   macro avg       0.99      0.99      0.99       360
+weighted avg       0.99      0.99      0.99       360
+
+
+Rules / Notes:
+N/A for ensemble model

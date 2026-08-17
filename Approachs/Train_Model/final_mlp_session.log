@@ -1,0 +1,237 @@
+[22:36:10] ================================================================================
+[22:36:10] FINAL MLP MIXED-TRAIN SCRIPT (8 features, SOCO-style)
+[22:36:10] Started: 2026-05-20 22:36
+[22:36:10] Device: cuda
+[22:36:10] Features: ['S_token', 'S_AST', 'S_structure', 'unixcoder_cosine', 'unixcoder_l2', 'unixcoder_manhattan', 'S_PDG', 'pdg_valid']
+[22:36:10] Distance normalization: 1 / (1 + d)
+[22:36:10] Final feature normalization: MinMaxScaler fitted on TRAIN only -> [0,1]
+[22:36:10] Final model output: sigmoid probability -> [0,1]
+[22:36:10] ================================================================================
+[22:36:10] Streaming CodeNet chunk-wise and building balanced pool...
+[22:36:13]   Chunk 10: rows=1,000,000 pos=30,355 neg=969,645
+[22:36:16]   Chunk 20: rows=2,000,000 pos=56,485 neg=1,943,515
+[22:36:21]   Chunk 30: rows=3,000,000 pos=78,390 neg=2,921,610
+[22:36:26]   Chunk 40: rows=4,000,000 pos=96,309 neg=3,903,691
+[22:36:32]   Chunk 50: rows=5,000,000 pos=109,872 neg=4,890,128
+[22:36:38]   Chunk 60: rows=6,000,000 pos=119,079 neg=5,880,921
+[22:36:44]   Chunk 70: rows=7,000,000 pos=123,930 neg=6,876,070
+[22:36:50]   Chunk 80: rows=8,000,000 pos=137,399 neg=7,862,601
+[22:36:55]   Chunk 90: rows=9,000,000 pos=166,472 neg=8,833,528
+[22:37:01]   Chunk 100: rows=10,000,000 pos=191,870 neg=9,808,130
+[22:37:07]   Chunk 110: rows=11,000,000 pos=212,372 neg=10,787,628
+[22:37:13]   Chunk 120: rows=12,000,000 pos=228,590 neg=11,771,410
+[22:37:19]   Chunk 130: rows=13,000,000 pos=240,184 neg=12,759,816
+[22:37:24]   Chunk 140: rows=14,000,000 pos=247,222 neg=13,752,778
+[22:37:30]   Chunk 150: rows=15,000,000 pos=249,999 neg=14,750,001
+[22:37:36]   Chunk 160: rows=16,000,000 pos=282,015 neg=15,717,985
+[22:37:42]   Chunk 170: rows=17,000,000 pos=309,270 neg=16,690,730
+[22:37:48]   Chunk 180: rows=18,000,000 pos=332,055 neg=17,667,945
+[22:37:53]   Chunk 190: rows=19,000,000 pos=349,940 neg=18,650,060
+[22:37:59]   Chunk 200: rows=20,000,000 pos=363,075 neg=19,636,925
+[22:38:05]   Chunk 210: rows=21,000,000 pos=371,090 neg=20,628,910
+[22:38:11]   Chunk 220: rows=22,000,000 pos=374,222 neg=21,625,778
+[22:38:17]   Chunk 230: rows=23,000,000 pos=403,734 neg=22,596,266
+[22:38:22]   Chunk 240: rows=24,000,000 pos=432,570 neg=23,567,430
+[22:38:28]   Chunk 250: rows=25,000,000 pos=456,222 neg=24,543,778
+[22:38:34]   Chunk 260: rows=26,000,000 pos=474,910 neg=25,525,090
+[22:38:40]   Chunk 270: rows=27,000,000 pos=488,269 neg=26,511,731
+[22:38:46]   Chunk 280: rows=28,000,000 pos=496,372 neg=27,503,628
+[22:38:51]   Chunk 290: rows=29,000,000 pos=499,499 neg=28,500,501
+[22:38:57]   Chunk 300: rows=30,000,000 pos=533,650 neg=29,466,350
+[22:39:03]   Chunk 310: rows=31,000,000 pos=562,675 neg=30,437,325
+[22:39:09]   Chunk 320: rows=32,000,000 pos=586,075 neg=31,413,925
+[22:39:15]   Chunk 330: rows=33,000,000 pos=603,850 neg=32,396,150
+[22:39:21]   Chunk 340: rows=34,000,000 pos=616,124 neg=33,383,876
+[22:39:27]   Chunk 350: rows=35,000,000 pos=622,669 neg=34,377,331
+[22:39:33]   Chunk 360: rows=36,000,000 pos=637,815 neg=35,362,185
+[22:39:39]   Chunk 370: rows=37,000,000 pos=671,472 neg=36,328,528
+[22:39:45]   Chunk 380: rows=38,000,000 pos=699,045 neg=37,300,955
+[22:39:51]   Chunk 390: rows=39,000,000 pos=720,534 neg=38,279,466
+[22:39:57]   Chunk 400: rows=40,000,000 pos=736,097 neg=39,263,903
+[22:40:02]   Chunk 410: rows=41,000,000 pos=745,419 neg=40,254,581
+[22:40:08]   Chunk 420: rows=42,000,000 pos=748,999 neg=41,251,001
+[22:40:14]   Chunk 430: rows=43,000,000 pos=785,679 neg=42,214,321
+[22:40:20]   Chunk 440: rows=44,000,000 pos=816,297 neg=43,183,703
+[22:40:26]   Chunk 450: rows=45,000,000 pos=840,354 neg=44,159,646
+[22:40:32]   Chunk 460: rows=46,000,000 pos=858,025 neg=45,141,975
+[22:40:38]   Chunk 470: rows=47,000,000 pos=868,972 neg=46,131,028
+[22:40:44]   Chunk 480: rows=48,000,000 pos=873,205 neg=47,126,795
+[22:40:50]   Chunk 490: rows=49,000,000 pos=907,475 neg=48,092,525
+[22:40:56]   Chunk 500: rows=50,000,000 pos=939,689 neg=49,060,311
+[22:41:02]   Chunk 510: rows=51,000,000 pos=965,104 neg=50,034,896
+[22:41:08]   Chunk 520: rows=52,000,000 pos=983,294 neg=51,016,706
+[22:41:14]   Chunk 530: rows=53,000,000 pos=994,345 neg=52,005,655
+[22:41:19]   Chunk 540: rows=54,000,000 pos=998,499 neg=53,001,501
+[22:41:25]   Chunk 550: rows=55,000,000 pos=1,038,084 neg=53,961,916
+[22:41:31]   Chunk 560: rows=56,000,000 pos=1,070,424 neg=54,929,576
+[22:41:37]   Chunk 570: rows=57,000,000 pos=1,095,255 neg=55,904,745
+[22:41:43]   Chunk 580: rows=58,000,000 pos=1,112,165 neg=56,887,835
+[22:41:49]   Chunk 590: rows=59,000,000 pos=1,121,210 neg=57,878,790
+[22:41:55]   Chunk 600: rows=60,000,000 pos=1,139,620 neg=58,860,380
+[22:42:01]   Chunk 610: rows=61,000,000 pos=1,177,749 neg=59,822,251
+[22:42:07]   Chunk 620: rows=62,000,000 pos=1,208,160 neg=60,791,840
+[22:42:12]   Chunk 630: rows=63,000,000 pos=1,229,922 neg=61,770,078
+[22:42:18]   Chunk 640: rows=64,000,000 pos=1,243,129 neg=62,756,871
+[22:42:24]   Chunk 650: rows=65,000,000 pos=1,247,999 neg=63,752,001
+[22:42:30]   Chunk 660: rows=66,000,000 pos=1,290,844 neg=64,709,156
+[22:42:36]   Chunk 670: rows=67,000,000 pos=1,325,279 neg=65,674,721
+[22:42:42]   Chunk 680: rows=68,000,000 pos=1,350,305 neg=66,649,695
+[22:42:48]   Chunk 690: rows=69,000,000 pos=1,366,145 neg=67,633,855
+[22:42:54]   Chunk 700: rows=70,000,000 pos=1,372,184 neg=68,627,816
+[22:43:00]   Chunk 710: rows=71,000,000 pos=1,412,745 neg=69,587,255
+[22:43:06]   Chunk 720: rows=72,000,000 pos=1,449,105 neg=70,550,895
+[22:43:11]   Chunk 730: rows=73,000,000 pos=1,475,679 neg=71,524,321
+[22:43:17]   Chunk 740: rows=74,000,000 pos=1,491,644 neg=72,508,356
+[22:43:23]   Chunk 750: rows=75,000,000 pos=1,497,499 neg=73,502,501
+[22:43:29]   Chunk 760: rows=76,000,000 pos=1,544,722 neg=74,455,278
+[22:43:35]   Chunk 770: rows=77,000,000 pos=1,580,995 neg=75,419,005
+[22:43:41]   Chunk 780: rows=78,000,000 pos=1,605,997 neg=76,394,003
+[22:43:47]   Chunk 790: rows=79,000,000 pos=1,619,472 neg=77,380,528
+[22:43:53]   Chunk 800: rows=80,000,000 pos=1,642,304 neg=78,357,696
+[22:43:59]   Chunk 810: rows=81,000,000 pos=1,687,160 neg=79,312,840
+[22:44:04]   Chunk 820: rows=82,000,000 pos=1,719,935 neg=80,280,065
+[22:44:10]   Chunk 830: rows=83,000,000 pos=1,739,830 neg=81,260,170
+[22:44:16]   Chunk 840: rows=84,000,000 pos=1,746,999 neg=82,253,001
+[22:44:22]   Chunk 850: rows=85,000,000 pos=1,798,860 neg=83,201,140
+[22:44:28]   Chunk 860: rows=86,000,000 pos=1,837,580 neg=84,162,420
+[22:44:34]   Chunk 870: rows=87,000,000 pos=1,861,797 neg=85,138,203
+[22:44:40]   Chunk 880: rows=88,000,000 pos=1,871,145 neg=86,128,855
+[22:44:46]   Chunk 890: rows=89,000,000 pos=1,920,534 neg=87,079,466
+[22:44:51]   Chunk 900: rows=90,000,000 pos=1,962,070 neg=88,037,930
+[22:44:57]   Chunk 910: rows=91,000,000 pos=1,987,485 neg=89,012,515
+[22:45:03]   Chunk 920: rows=92,000,000 pos=1,996,499 neg=90,003,501
+[22:45:09]   Chunk 930: rows=93,000,000 pos=2,054,684 neg=90,945,316
+[22:45:15]   Chunk 940: rows=94,000,000 pos=2,095,099 neg=91,904,901
+[22:45:21]   Chunk 950: rows=95,000,000 pos=2,116,922 neg=92,883,078
+[22:45:27]   Chunk 960: rows=96,000,000 pos=2,146,710 neg=93,853,290
+[22:45:33]   Chunk 970: rows=97,000,000 pos=2,200,650 neg=94,799,350
+[22:45:38]   Chunk 980: rows=98,000,000 pos=2,234,175 neg=95,765,825
+[22:45:44]   Chunk 990: rows=99,000,000 pos=2,245,999 neg=96,754,001
+[22:45:50]   Chunk 1000: rows=100,000,000 pos=2,311,597 neg=97,688,403
+[22:45:56]   Chunk 1010: rows=101,000,000 pos=2,353,597 neg=98,646,403
+[22:46:02]   Chunk 1020: rows=102,000,000 pos=2,370,060 neg=99,629,940
+[22:46:08]   Chunk 1030: rows=103,000,000 pos=2,433,575 neg=100,566,425
+[22:46:14]   Chunk 1040: rows=104,000,000 pos=2,479,247 neg=101,520,753
+[22:46:20]   Chunk 1050: rows=105,000,000 pos=2,495,499 neg=102,504,501
+[22:46:25]   Chunk 1060: rows=106,000,000 pos=2,570,609 neg=103,429,391
+[22:46:31]   Chunk 1070: rows=107,000,000 pos=2,612,369 neg=104,387,631
+[22:46:37]   Chunk 1080: rows=108,000,000 pos=2,655,247 neg=105,344,753
+[22:46:43]   Chunk 1090: rows=109,000,000 pos=2,721,495 neg=106,278,505
+[22:46:49]   Chunk 1100: rows=110,000,000 pos=2,745,497 neg=107,254,503
+[22:46:55]   Chunk 1110: rows=111,000,000 pos=2,832,935 neg=108,167,065
+[22:47:00]   Chunk 1120: rows=112,000,000 pos=2,868,844 neg=109,131,156
+[22:47:06]   Chunk 1130: rows=113,000,000 pos=2,956,872 neg=110,043,128
+[22:47:12]   Chunk 1140: rows=114,000,000 pos=2,994,997 neg=111,005,003
+[22:47:18]   Chunk 1150: rows=115,000,000 pos=3,099,049 neg=111,900,951
+[22:47:24]   Chunk 1160: rows=116,000,000 pos=3,175,235 neg=112,824,765
+[22:47:30]   Chunk 1170: rows=117,000,000 pos=3,244,994 neg=113,755,006
+[22:47:35]   Chunk 1180: rows=118,000,000 pos=3,366,597 neg=114,633,403
+[22:47:41]   Chunk 1190: rows=119,000,000 pos=3,495,485 neg=115,504,515
+[22:47:47]   Chunk 1200: rows=120,000,000 pos=3,750,000 neg=116,250,000
+[22:48:00] CodeNet balanced pool: rows=3,000,000 pos=500,000 neg=2,500,000
+[22:48:02] Loading external labeled set...
+[22:48:02] External total: rows=13,366 pos=3,280 neg=10,086
+[22:48:02] External train: rows=8,553 pos=2,099 neg=6,454
+[22:48:02] External valid: rows=2,139 pos=525 neg=1,614
+[22:48:02] External test : rows=2,674 pos=656 neg=2,018
+[22:48:02] Loading SOCO evaluation set...
+[22:48:28] SOCO eval: rows=41,263,489 pos=278 neg=41,263,211
+[22:48:35] Mixing CodeNet pool + external train for final MLP training set...
+[22:48:37] Mixed train: rows=3,008,553 pos=502,099 neg=2,506,454
+[22:48:37] Validation : rows=2,139 pos=525 neg=1,614
+[22:48:37] Ext Test   : rows=2,674 pos=656 neg=2,018
+[22:48:37] SOCO Eval  : rows=41,263,489 pos=278 neg=41,263,211
+[22:48:37] Fitting MinMaxScaler on TRAIN only...
+[22:48:40] Feature range check [train] -> min=0.0000, max=1.0000
+[22:48:40] Feature range check [valid] -> min=0.0123, max=1.0000
+[22:48:40] Feature range check [test] -> min=0.0123, max=1.0000
+[22:48:40] Feature range check [soco] -> min=0.0000, max=1.0000
+[22:48:40] Starting MLP training...
+[22:49:27] Epoch 001/400 | loss=0.579071 | valid_f1=0.9080 P=0.9801 R=0.8457 @t=0.88 BEST
+[22:49:53] Epoch 002/400 | loss=0.521724 | valid_f1=0.9085 P=0.9866 R=0.8419 @t=0.87 BEST
+[22:50:20] Epoch 003/400 | loss=0.513224 | valid_f1=0.9108 P=0.9867 R=0.8457 @t=0.87 BEST
+[22:50:46] Epoch 004/400 | loss=0.511032 | valid_f1=0.9067 P=0.9822 R=0.8419 @t=0.87 
+[22:51:12] Epoch 005/400 | loss=0.510072 | valid_f1=0.9089 P=0.9823 R=0.8457 @t=0.88 
+[22:51:38] Epoch 006/400 | loss=0.509534 | valid_f1=0.9064 P=0.9977 R=0.8305 @t=0.88 
+[22:52:04] Epoch 007/400 | loss=0.509158 | valid_f1=0.9055 P=0.9822 R=0.8400 @t=0.87 
+[22:52:31] Epoch 008/400 | loss=0.508576 | valid_f1=0.9070 P=0.9910 R=0.8362 @t=0.88 
+[22:52:57] Epoch 009/400 | loss=0.508163 | valid_f1=0.9068 P=0.9932 R=0.8343 @t=0.87 
+[22:53:23] Epoch 010/400 | loss=0.508048 | valid_f1=0.9080 P=0.9932 R=0.8362 @t=0.88 
+[22:53:49] Epoch 011/400 | loss=0.507975 | valid_f1=0.9080 P=0.9932 R=0.8362 @t=0.88 
+[22:54:15] Epoch 012/400 | loss=0.507686 | valid_f1=0.9083 P=0.9888 R=0.8400 @t=0.88 
+[22:54:41] Epoch 013/400 | loss=0.507393 | valid_f1=0.9052 P=0.9865 R=0.8362 @t=0.88 
+[22:55:08] Epoch 014/400 | loss=0.507308 | valid_f1=0.9055 P=0.9822 R=0.8400 @t=0.87 
+[22:55:34] Epoch 015/400 | loss=0.507273 | valid_f1=0.9070 P=0.9910 R=0.8362 @t=0.88 
+[22:56:00] Epoch 016/400 | loss=0.507122 | valid_f1=0.9098 P=0.9977 R=0.8362 @t=0.88 
+[22:56:26] Epoch 017/400 | loss=0.506687 | valid_f1=0.9076 P=0.9977 R=0.8324 @t=0.88 
+[22:56:52] Epoch 018/400 | loss=0.506773 | valid_f1=0.9053 P=0.9977 R=0.8286 @t=0.88 
+[22:57:19] Epoch 019/400 | loss=0.506727 | valid_f1=0.9098 P=0.9977 R=0.8362 @t=0.87 
+[22:57:45] Epoch 020/400 | loss=0.506651 | valid_f1=0.9045 P=0.9695 R=0.8476 @t=0.86 
+[22:58:11] Epoch 021/400 | loss=0.506682 | valid_f1=0.9070 P=0.9910 R=0.8362 @t=0.87 
+[22:58:37] Epoch 022/400 | loss=0.506567 | valid_f1=0.9052 P=0.9865 R=0.8362 @t=0.87 
+[22:59:04] Epoch 023/400 | loss=0.506476 | valid_f1=0.9052 P=0.9865 R=0.8362 @t=0.87 
+[22:59:30] Epoch 024/400 | loss=0.506166 | valid_f1=0.9053 P=0.9977 R=0.8286 @t=0.88 
+[22:59:56] Epoch 025/400 | loss=0.505837 | valid_f1=0.9087 P=0.9977 R=0.8343 @t=0.88 
+[23:00:23] Epoch 026/400 | loss=0.506076 | valid_f1=0.9098 P=0.9977 R=0.8362 @t=0.88 
+[23:00:49] Epoch 027/400 | loss=0.506053 | valid_f1=0.9087 P=0.9977 R=0.8343 @t=0.88 
+[23:01:15] Epoch 028/400 | loss=0.505801 | valid_f1=0.9089 P=0.9955 R=0.8362 @t=0.88 
+[23:01:41] Epoch 029/400 | loss=0.505482 | valid_f1=0.9087 P=0.9977 R=0.8343 @t=0.89 
+[23:02:07] Epoch 030/400 | loss=0.505848 | valid_f1=0.9074 P=0.9866 R=0.8400 @t=0.87 
+[23:02:33] Epoch 031/400 | loss=0.505603 | valid_f1=0.9080 P=0.9932 R=0.8362 @t=0.87 
+[23:03:00] Epoch 032/400 | loss=0.505647 | valid_f1=0.9087 P=0.9977 R=0.8343 @t=0.87 
+[23:03:26] Epoch 033/400 | loss=0.505367 | valid_f1=0.9061 P=0.9887 R=0.8362 @t=0.87 
+[23:03:26] Early stopping at epoch 33 (no improvement for 30 epochs)
+[23:03:26] Saved best model -> /home/24mcmi06/DEMO_TEST/Approachs/Hybrid_based/Codenet_label/final_mlp_mixed_8feat.pt
+[23:03:26] Evaluating on held-out external test...
+[23:03:26] Evaluating on SOCO...
+[23:12:34] 
+================================================================================
+[23:12:34] FINAL RESULTS
+[23:12:34] ================================================================================
+[23:12:34] Best epoch      : 3
+[23:12:34] Best valid F1   : 0.9108
+[23:12:34] Best threshold  : 0.87
+[23:12:34] 
+Validation metrics:
+[23:12:34]   F1=0.9108 P=0.9867 R=0.8457
+[23:12:34]   TP=444 FP=6 FN=81 TN=1,608
+[23:12:34] 
+Held-out External Test metrics:
+[23:12:34]   F1=0.9266 P=0.9965 R=0.8659
+[23:12:34]   TP=568 FP=2 FN=88 TN=2,016
+[23:12:34] 
+External classification report:
+[23:12:34]               precision    recall  f1-score   support
+
+   Non-Clone       0.96      1.00      0.98      2018
+       Clone       1.00      0.87      0.93       656
+
+    accuracy                           0.97      2674
+   macro avg       0.98      0.93      0.95      2674
+weighted avg       0.97      0.97      0.97      2674
+
+[23:12:34] 
+SOCO metrics:
+[23:12:34]   F1=0.0001 P=0.0001 R=0.8993
+[23:12:34]   TP=250 FP=4,086,405 FN=28 TN=37,176,806
+[23:12:34] 
+SOCO classification report:
+[23:12:39]               precision    recall  f1-score   support
+
+   Non-Clone       1.00      0.90      0.95  41263211
+       Clone       0.00      0.90      0.00       278
+
+    accuracy                           0.90  41263489
+   macro avg       0.50      0.90      0.47  41263489
+weighted avg       1.00      0.90      0.95  41263489
+
+[23:12:39] 
+Saved artifacts:
+[23:12:39]   Model      : /home/24mcmi06/DEMO_TEST/Approachs/Hybrid_based/Codenet_label/final_mlp_mixed_8feat.pt
+[23:12:39]   Scaler     : /home/24mcmi06/DEMO_TEST/Approachs/Hybrid_based/Codenet_label/final_mlp_mixed_8feat_scaler.joblib
+[23:12:39]   Meta       : /home/24mcmi06/DEMO_TEST/Approachs/Hybrid_based/Codenet_label/final_mlp_mixed_8feat_meta.json
+[23:12:39]   Train hist : /home/24mcmi06/DEMO_TEST/Approachs/Hybrid_based/Codenet_label/final_mlp_train_history.csv
+[23:12:39]   Valid pred : /home/24mcmi06/DEMO_TEST/Approachs/Hybrid_based/Codenet_label/final_mlp_valid_predictions.csv
+[23:12:39]   Ext pred   : /home/24mcmi06/DEMO_TEST/Approachs/Hybrid_based/Codenet_label/final_mlp_external_test_predictions.csv
+[23:12:39]   SOCO pred  : /home/24mcmi06/DEMO_TEST/Approachs/Hybrid_based/Codenet_label/final_mlp_soco_predictions.csv
+[23:12:39]   Session log: /home/24mcmi06/DEMO_TEST/Approachs/Hybrid_based/Codenet_label/final_mlp_session.log

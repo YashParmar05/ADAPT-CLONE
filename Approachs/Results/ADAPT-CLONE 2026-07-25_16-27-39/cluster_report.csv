@@ -1,0 +1,3 @@
+Problem,Cluster_ID,Cluster_Size,Files,Pair_Relationships,Avg_Probability,Graph_Density,Confidence
+P1,1,4,"s0.cpp, s1.cpp, s2.cpp, s3.cpp","s0.cpp - s1.cpp (Type-1, 1.0) | s0.cpp - s2.cpp (Type-2, 0.998) | s0.cpp - s3.cpp (Type-3, 0.992) | s1.cpp - s2.cpp (Type-2, 0.997) | s1.cpp - s3.cpp (Type-3, 0.989) | s3.cpp - s2.cpp (Type-4, 0.98)",0.993,1.0,HIGH
+P1,2,1,s4.cpp,N/A — no clone pair detected,0.0,0.0,UNIQUE — no clone found

@@ -1,0 +1,47 @@
+FINAL MLP + ENSEMBLE TYPE CLASSIFIER RUN: 2026-07-25_16-25-53
+==================================================
+
+[WARNING] Single-class dataset (only CLONE)
+
+==== Binary Clone Metrics ====
+Accuracy : 0.9950
+Precision: 1.0000
+Recall   : 0.9950
+F1 Score : 0.9975
+
+Threshold Used : 0.87
+Best Valid F1  : 0.9107692307692308
+Best Epoch     : 3
+
+Confusion Matrix:
+  TN=0  FP=0
+  FN=2  TP=398
+
+Classification Report:
+              precision    recall  f1-score   support
+
+   Not Clone       0.00      0.00      0.00         0
+       Clone       1.00      0.99      1.00       400
+
+    accuracy                           0.99       400
+   macro avg       0.50      0.50      0.50       400
+weighted avg       1.00      0.99      1.00       400
+
+==== Type Classifier Info ====
+Best Model     : ExtraTrees
+CV F1 (macro)  : 0.8604
+Train F1 (macro): 0.9945
+
+==== Type Classification Check ====
+Type Macro-F1 : 0.9724
+
+              precision    recall  f1-score   support
+
+      Type-1       0.99      1.00      1.00       100
+      Type-2       0.97      0.93      0.95       100
+      Type-3       0.94      0.97      0.96       100
+      Type-4       0.99      0.99      0.99        98
+
+    accuracy                           0.97       398
+   macro avg       0.97      0.97      0.97       398
+weighted avg       0.97      0.97      0.97       398

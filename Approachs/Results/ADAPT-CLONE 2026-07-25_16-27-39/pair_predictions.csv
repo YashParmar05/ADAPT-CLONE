@@ -1,0 +1,11 @@
+problem_1,file_1,problem_2,file_2,Plagiarism_Probability,Is_Plagiarized,Predicted_Type
+P1,s0.cpp,P1,s1.cpp,0.9998053,True,Type-1
+P1,s0.cpp,P1,s2.cpp,0.9976191,True,Type-2
+P1,s0.cpp,P1,s3.cpp,0.9922414,True,Type-3
+P1,s0.cpp,P1,s4.cpp,0.91976017,True,Type-4
+P1,s1.cpp,P1,s2.cpp,0.9970912,True,Type-2
+P1,s1.cpp,P1,s3.cpp,0.9886108,True,Type-3
+P1,s1.cpp,P1,s4.cpp,0.90670615,True,Type-4
+P1,s2.cpp,P1,s3.cpp,0.9801344,True,Type-4
+P1,s2.cpp,P1,s4.cpp,0.87964445,True,Type-4
+P1,s3.cpp,P1,s4.cpp,0.92993844,True,Type-4

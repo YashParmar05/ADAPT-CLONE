@@ -1,0 +1,33 @@
+{
+  "timestamp": "2026-07-25_16-27-39",
+  "input_file": "/home/yash/SCPD_TEST_Final/Approachs/Hybrid_based/combined.csv",
+  "binary_model": "/home/yash/SCPD_TEST_Final/Approachs/Adapt_model/final_mlp_mixed_8feat.pt",
+  "type_model": "/home/yash/SCPD_TEST_Final/Approachs/Adapt_model/type_classifier_ensemble_best.joblib",
+  "threshold": 0.87,
+  "cluster_threshold": 0.97,
+  "n_rows": 10,
+  "predicted_clones": 10,
+  "predicted_clone_rate": 1.0,
+  "clone_type_distribution": {
+    "Type-4": 5,
+    "Type-2": 2,
+    "Type-3": 2,
+    "Type-1": 1
+  },
+  "binary_metrics": {
+    "accuracy": 1.0,
+    "precision": 1.0,
+    "recall": 1.0,
+    "f1": 1.0,
+    "tn": 0,
+    "fp": 0,
+    "fn": 0,
+    "tp": 10
+  },
+  "type_check_macro_f1": null,
+  "outputs": {
+    "pair_predictions": "/home/yash/SCPD_TEST_Final/Approachs/Results/ADAPT-CLONE: 2026-07-25_16-27-39/pair_predictions.csv",
+    "cluster_report": "/home/yash/SCPD_TEST_Final/Approachs/Results/ADAPT-CLONE: 2026-07-25_16-27-39/cluster_report.csv",
+    "evaluation_metrics": "/home/yash/SCPD_TEST_Final/Approachs/Results/ADAPT-CLONE: 2026-07-25_16-27-39/evaluation_metrics.txt"
+  }
+}
